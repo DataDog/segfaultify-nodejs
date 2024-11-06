@@ -17,7 +17,8 @@ try {
 
 try {
   assert(error instanceof Error, `Expected an error.`)
-  assert(error.signal === 'SIGSEGV' || error.status === 139, `Expected a segmentation fault.`)
+  // Windows returns an exit code of 2816 for some reason.
+  assert(error.signal === 'SIGSEGV' || error.status === 139 || error.status === 2816, `Expected a segmentation fault.`)
 } catch (e) {
   console.error(error)
   throw e
