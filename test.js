@@ -5,11 +5,12 @@ const { execSync } = require('child_process')
 
 const cwd = __dirname
 const stdio = ['inherit', 'inherit', 'inherit']
+const shell = 'bash'
 
 let error
 
 try {
-  execSync(`node -e "require('.').segfaultify()"`, { cwd, stdio })
+  execSync(`node -e "require('.').segfaultify()"`, { cwd, stdio, shell })
 } catch (e) {
   error = e
 }
