@@ -1,0 +1,26 @@
+{
+  "name": "segfaultify",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "segfault"
+  ],
+  "author": "Datadog Inc. <info@datadoghq.com>",
+  "license": "Apache-2.0",
+  "description": "A native addon that always segfaults for testing purpose",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DataDog/segfaultify-nodejs.git"
+  },
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/DataDog/segfaultify-nodejs/issues"
+  },
+  "homepage": "https://github.com/DataDog/segfaultify-nodejs#readme",
+  "dependencies": {
+    "node-gyp-build": "^3.9.0"
+  }
+}
