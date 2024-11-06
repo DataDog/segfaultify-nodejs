@@ -1,7 +1,7 @@
 {
   "targets": [
     {
-      "target_name": "segfaultify",
+      "target_name": "addon",
       "sources": [ "segfaultify.c" ],
     }
   ]
