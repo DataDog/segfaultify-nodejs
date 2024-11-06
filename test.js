@@ -14,5 +14,10 @@ try {
   error = e
 }
 
-assert(error instanceof Error, `Expected an error but got: ${error}`)
-assert(error.signal === 'SIGSEGV' || error.status === 139, `Expected a segfault but got: ${error}`)
+try {
+  assert(error instanceof Error, `Expected an error.`)
+  assert(error.signal === 'SIGSEGV' || error.status === 139, `Expected a segmentation fault.`)
+} catch (e) {
+  console.error(error)
+  throw e
+}
